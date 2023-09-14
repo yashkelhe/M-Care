@@ -1,0 +1,169 @@
+/* Reset some default styles for better consistency */
+/* Add styles for the navbar */
+nav {
+    background-color: #b11cb9;
+    color: #fff;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+    /* Add a transition effect */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+    text-align: center;
+}
+
+/* nav :hover {
+    background-color: #555;
+    /* Change to your desired glowing color 
+} 
+*/
+
+li :hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(123, 17, 93, 0.775);
+    /* Change to your desired glowing color */
+}
+
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav .active a {
+    color: #ff5733;
+    /* Change the color to your desired active link color */
+    font-weight: bold;
+    /* You can add other styles like background color or underline to make it stand out */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Rest of your existing CSS */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    /* Set a background color for the entire page */
+}
+
+
+
+/* Container for system cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow system cards to wrap to the next line on smaller screens */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* System card styling */
+.system-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.system-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* System card image */
+.system-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* System card title */
+.system-card h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* System card details */
+.system-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Highlight status based on 'Full' or 'Low' */
+.system-card #status1,
+.system-card #status2 {
+    color: #456d96;
+    /* Blue for 'Low' status */
+}
+
+.system-card #status1:after,
+.system-card #status2:after {
+    content: " - ";
+    color: #e80a0a;
+}
+
+.system-card #status1:before,
+.system-card #status2:before {
+    content: " - ";
+    font-weight: bold;
+}
+
+/* Styling for description, details, and maintenance date */
+.system-card #description1,
+.system-card #description2,
+.system-card #details1,
+.system-card #details2,
+.system-card #maintenanceDate1,
+.system-card #maintenanceDate2 {
+
+    font-style: italic;
+    color: #020101;
+}
+
+/* Additional CSS for background image */
+body {
+    background-image: url('backgroud_panel.png');
+    /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CSS for footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Media query for responsive design (adjust as needed) */
+@media (max-width: 768px) {
+    .system-card {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
